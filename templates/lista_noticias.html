@@ -1,8 +1,8 @@
 <html>
     <title>Teste</title>
     <body>
-        {% for nome in nomes %}
-            <h1>id da noticia {{nome}}</h1>
+        {% for noticia in noticias %}
+            <a href="/{{noticia['id_noticia']}}"> {{noticia['titulo']}}</a>
         {% endfor %}
     </body>
 </html>
