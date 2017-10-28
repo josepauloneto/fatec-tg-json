@@ -1,8 +1,29 @@
 <html>
-    <title>Teste</title>
-    <body>
-        {% for noticia in noticias %}
-            <a href="/{{noticia['id_noticia']}}"> {{noticia['titulo']}}</a><br/>
-        {% endfor %}
-    </body>
+	<head>
+		<title>trabalho de Graduçãobject</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
+	<body>
+		<header class="header" id="header">
+			<a href="#" class="logo">
+				<img src="https://bognarjunior.files.wordpress.com/2015/05/f10a8e64597ec7e277bfdb0e2db977af.png?w=250" alt="">
+			</a>
+			<div class="presentation">
+				<h1>Trabalho de Graduação</h1>
+				<span class="title">Alunos: <span class="answer">José Paulo Neto e Thales Monteiro</span></span>
+				<span class="title">Orientador: <span class="answer">Luis Alexandre</span></span>
+
+			</div>
+		</header>
+		<div class="news-field">
+			{% for noticia in noticias %}
+				<div class="new-square">
+					<a href="/{{noticia['id_noticia']}}"> {{noticia['titulo']}}</a><br/>
+				</div>
+			{% endfor %}
+		</div>
+	</body>
 </html>
